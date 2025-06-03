@@ -1,6 +1,7 @@
 $colore-primario-sfondo: #073963;
 $colore-secondario-sfondo: #1082df;
 $colore-hover: #71afe2;
+$colore-testo-menu: #ffffff;
 
 .navbar {
   width: 100%;
@@ -33,7 +34,7 @@ $colore-hover: #71afe2;
     transition: max-height .1s ease-out;
 
     .nav-link {
-      color: #ffffff;
+      color:$colore-testo-menu;
       display: block;
       padding: 10px 15px;
     }
