@@ -1,9 +1,145 @@
 .navbar {
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+@media (max-width: 47.999em) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
 }
 .navbar .navbar-nav {
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  border-radius: 0px;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  margin-top: 0px;
+  align-items: flex-start;
+  overflow: hidden;
+  background-color: #1082df;
+  border-radius: 0px;
+  padding: 0;
   gap: 1.5rem;
+  max-height: 0;
+  transition: max-height 0.1s ease-out;
+}
+.navbar .navbar-nav .nav-link {
+  color: #ffffff;
+  display: block;
+  padding: 10px 15px;
+}
+.navbar .navbar-nav .nav-link:hover {
+  background-color: #71afe2;
+  border-radius: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #073963;
+}
+
+header {
+  background-color: #073963;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+header .menu-icon {
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+  margin: 0;
+}
+header .menu-icon .nav-icon {
+  background-color: #1082df;
+  display: block;
+  width: 25px;
+  height: 3px;
+  position: relative;
+  transition: backgound-color 0.2s ease-out;
+}
+header .menu-icon .nav-icon::before, header .menu-icon .nav-icon::after {
+  background-color: #1082df;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  position: absolute;
+}
+header .menu-icon .nav-icon::before {
+  top: 8px;
+}
+header .menu-icon .nav-icon::after {
+  top: -8px;
+}
+header .menu-btn {
+  display: none;
+}
+header .menu-btn:checked ~ .menu-icon {
+  background-color: #1082df;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 28px 20px;
+  z-index: 2;
+}
+header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background-color: transparent;
+}
+header .menu-btn:checked ~ .menu-icon .nav-icon::before, header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  background-color: #073963;
+}
+header .menu-btn:checked ~ .navbar {
+  background-color: #1082df;
+  top: 0;
+  height: 100vh;
+}
+header .menu-btn:checked ~ .navbar .navbar-nav {
+  max-height: 100%;
+  padding: 1rem;
+}
+header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background-color: transparent;
+}
+header .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 48em) {
+  header .menu-icon {
+    display: none;
+  }
+  .navbar {
+    position: static;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .navbar .navbar-nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 30px;
+    padding: 0.5rem 15rem !important;
+    width: auto;
+    max-height: none !important;
+    margin: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
