@@ -1,6 +1,7 @@
-$colore-primario-sfondo: #073963;
+$colore-primario-sfondo: #0a2841;
+$colore-primario-sfondo-header: hsl(207, 73%, 15%);
 $colore-secondario-sfondo: #1082df;
-$colore-hover: #71afe2;
+$colore-hover: rgba(113, 175, 226, 0.568);
 $colore-testo-menu: #ffffff;
 
 .navbar {
@@ -19,7 +20,7 @@ $colore-testo-menu: #ffffff;
 
   .navbar-nav {
     width: 100%;
-    border-radius: 0px; 
+    border-radius: 0px;
     align-items: center;
     text-align: center;
     justify-content: flex-start;
@@ -34,7 +35,7 @@ $colore-testo-menu: #ffffff;
     transition: max-height .1s ease-out;
 
     .nav-link {
-      color:$colore-testo-menu;
+      color: $colore-testo-menu;
       display: block;
       padding: 10px 15px;
     }
@@ -49,11 +50,12 @@ $colore-testo-menu: #ffffff;
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: $colore-primario-sfondo;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, $colore-primario-sfondo, $colore-secondario-sfondo);
 }
 
 header {
-  background-color: $colore-primario-sfondo;
+  background-color: transparent;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -142,6 +144,18 @@ header {
   }
 }
 
+h1 {
+  color: $colore-testo-menu;
+}
+
+h2 {
+  color: $colore-testo-menu;
+}
+
+p {
+  color: $colore-testo-menu;
+}
+
 @media (min-width: 48em) {
   header .menu-icon {
     display: none;
@@ -166,5 +180,69 @@ header {
     width: auto;
     max-height: none !important;
     margin: 1rem;
+  }
+
+  .container-fluid {
+    display: flex;
+    flex-direction: row;
+    padding: 150px 10% 40px 10%;
+  }
+
+  .bio-iniziale {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+  }
+
+  .foto-profilo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-fluid {
+    width: 60%;
+    height: fit-content;
+  }
+}
+
+
+
+@media (max-width: 47.999em) {
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px 20px 20px;
+
+    .foto-profilo {
+      display: flex;
+      justify-content: center;
+
+      .img-fluid {
+        padding: 20px 0px;
+        width: 90%;
+        background-color: transparent;
+      }
+    }
+
+
+  }
+}
+
+.bottoni-bio{
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  padding: 10px 0px;
+}
+
+.icone-social{
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  padding: 10px 0px;
+
+  .logo-s2i{
+    height: 32px;
+    width: 32px;
   }
 }

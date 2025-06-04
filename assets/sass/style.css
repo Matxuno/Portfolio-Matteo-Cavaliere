@@ -35,18 +35,19 @@
   padding: 10px 15px;
 }
 .navbar .navbar-nav .nav-link:hover {
-  background-color: #71afe2;
+  background-color: rgba(113, 175, 226, 0.568);
   border-radius: 20px;
 }
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #073963;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0a2841, #1082df);
 }
 
 header {
-  background-color: #073963;
+  background-color: transparent;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -96,7 +97,7 @@ header .menu-btn:checked ~ .menu-icon .nav-icon {
   background-color: transparent;
 }
 header .menu-btn:checked ~ .menu-icon .nav-icon::before, header .menu-btn:checked ~ .menu-icon .nav-icon::after {
-  background-color: #073963;
+  background-color: #0a2841;
 }
 header .menu-btn:checked ~ .navbar {
   background-color: #1082df;
@@ -117,6 +118,18 @@ header .menu-btn:checked ~ .menu-icon .nav-icon::before {
 header .menu-btn:checked ~ .menu-icon .nav-icon::after {
   transform: rotate(45deg);
   top: 0;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+p {
+  color: #ffffff;
 }
 
 @media (min-width: 48em) {
@@ -142,4 +155,56 @@ header .menu-btn:checked ~ .menu-icon .nav-icon::after {
     max-height: none !important;
     margin: 1rem;
   }
+  .container-fluid {
+    display: flex;
+    flex-direction: row;
+    padding: 150px 10% 40px 10%;
+  }
+  .bio-iniziale {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+  }
+  .foto-profilo {
+    display: flex;
+    justify-content: center;
+  }
+  .img-fluid {
+    width: 60%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 47.999em) {
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px 20px 20px;
+  }
+  .container-fluid .foto-profilo {
+    display: flex;
+    justify-content: center;
+  }
+  .container-fluid .foto-profilo .img-fluid {
+    padding: 20px 0px;
+    width: 90%;
+    background-color: transparent;
+  }
+}
+.bottoni-bio {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  padding: 10px 0px;
+}
+
+.icone-social {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  padding: 10px 0px;
+}
+.icone-social .logo-s2i {
+  height: 32px;
+  width: 32px;
 }/*# sourceMappingURL=style.css.map */
