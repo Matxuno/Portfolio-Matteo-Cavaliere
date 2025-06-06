@@ -27,7 +27,7 @@
   padding: 0;
   gap: 1.5rem;
   max-height: 0;
-  transition: max-height 0.1s ease-out;
+  transition: max-height 0.3s ease-out;
 }
 .navbar .navbar-nav .nav-link {
   color: #ffffff;
@@ -65,7 +65,7 @@ header .menu-icon .nav-icon {
   width: 25px;
   height: 3px;
   position: relative;
-  transition: backgound-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
 }
 header .menu-icon .nav-icon::before, header .menu-icon .nav-icon::after {
   background-color: #1082df;
@@ -107,6 +107,7 @@ header .menu-btn:checked ~ .navbar {
 header .menu-btn:checked ~ .navbar .navbar-nav {
   max-height: 100%;
   padding: 1rem;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 header .menu-btn:checked ~ .menu-icon .nav-icon {
   background-color: transparent;
@@ -118,6 +119,11 @@ header .menu-btn:checked ~ .menu-icon .nav-icon::before {
 header .menu-btn:checked ~ .menu-icon .nav-icon::after {
   transform: rotate(45deg);
   top: 0;
+}
+
+.nav-link.active {
+  background-color: rgba(10, 40, 65, 0.795);
+  border-radius: 30px;
 }
 
 h1 {
@@ -133,6 +139,14 @@ p {
 }
 
 @media (min-width: 48em) {
+  h1 {
+    color: #ffffff;
+    font-size: 54px;
+  }
+  h2 {
+    color: #ffffff;
+    font-size: 40px;
+  }
   header .menu-icon {
     display: none;
   }
@@ -167,7 +181,8 @@ p {
   }
   .foto-profilo {
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    padding-right: 50px;
   }
   .img-fluid {
     width: 60%;
@@ -207,4 +222,36 @@ p {
 .icone-social .logo-s2i {
   height: 32px;
   width: 32px;
+}
+
+.about-me {
+  padding: 2rem;
+  margin: 2rem auto;
+  line-height: 1.6;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+@media (min-width: 48em) {
+  .about-me {
+    margin: 2rem 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .about-me .text-about-me {
+    width: 100%;
+    order: 1;
+  }
+  .about-me .foto-laurea {
+    display: flex;
+    justify-content: left;
+    order: 0;
+    width: 50%;
+    padding-right: 32px;
+  }
+  .about-me .foto-laurea .img-fluid {
+    padding: 20px 0px;
+    width: 100%;
+    background-color: transparent;
+  }
 }/*# sourceMappingURL=style.css.map */
