@@ -3,6 +3,7 @@ $colore-primario-sfondo: #0a2841;
 $colore-secondario-sfondo: #1082df;
 $colore-hover: rgba(113, 175, 226, 0.568);
 $colore-testo-menu: #ffffff;
+$colore-sfondo-transparent: rgba(255, 255, 255, 0.05);
 
 .navbar {
   width: 100%;
@@ -269,7 +270,7 @@ p {
   padding: 2rem;
   margin: 2rem auto;
   line-height: 1.6;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: $colore-sfondo-transparent;
   border-radius: 10px;
 
   @media (min-width: 48em) {
@@ -309,7 +310,43 @@ p {
     margin: 5px;
   }
 
+  .skills-lingue {
+    padding: 2rem;
+    line-height: 1.6;
+    background-color: $colore-sfondo-transparent;
+    border-radius: 10px;
+    margin-bottom: 1em;
+
+    .table {
+      color: $colore-testo-menu;
+      border-radius: 10px;
+      overflow: hidden;
+      border: none;
+
+      th,
+      td {
+        border: none;
+      }
+    }
+  }
+
+  .cv {
+    color: $colore-testo-menu;
+    padding: 2rem;
+    line-height: 1.6;
+    background-color: $colore-sfondo-transparent;
+    border-radius: 10px;
+  }
+
   @media (min-width: 48em) {
-      padding: 0 10% 40px 10%;
+    padding: 0 10% 40px 10%;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10% 40px 10%;
+    gap: 1em;
+
+    .skills-lingue{
+      margin-bottom: 0;
+    }
   }
 }
