@@ -1,3 +1,4 @@
+$colore-sfondo-navbar: hsla(0, 0%, 100%, 0);
 $colore-primario-sfondo: #0a2841;
 $colore-secondario-sfondo: #1082df;
 $colore-hover: rgba(113, 175, 226, 0.568);
@@ -6,9 +7,10 @@ $colore-testo-menu: #ffffff;
 .navbar {
   width: 100%;
   position: absolute;
-  top: 0;
+  margin-top: 0px;
   left: 0;
   padding: 0;
+
 
   @media (max-width: 47.999em) {
     position: absolute;
@@ -54,7 +56,8 @@ body {
 }
 
 header {
-  background-color: transparent;
+  backdrop-filter: blur(25px);
+  background-color: $colore-sfondo-navbar;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -182,7 +185,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 0rem;
   }
 
   .navbar .navbar-nav {
@@ -293,5 +296,20 @@ p {
         background-color: transparent;
       }
     }
+  }
+}
+
+.curriculum {
+  padding: 0 20px 40px 20px;
+
+  .badge {
+    background-color: $colore-secondario-sfondo;
+    color: $colore-testo-menu;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  @media (min-width: 48em) {
+      padding: 0 10% 40px 10%;
   }
 }
