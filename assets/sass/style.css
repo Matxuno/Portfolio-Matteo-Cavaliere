@@ -140,6 +140,11 @@ p {
   color: #ffffff;
 }
 
+.btn-primary {
+  background-color: #ffffff;
+  color: #0a2841;
+}
+
 @media (min-width: 48em) {
   h1 {
     color: #ffffff;
@@ -264,11 +269,17 @@ p {
 .curriculum .badge {
   background-color: #1082df;
   color: #ffffff;
-  padding: 5px;
+  padding: 5px 8px;
   margin: 5px;
 }
+.curriculum .badge .logo {
+  width: 15px;
+  height: auto;
+  border-radius: 15px;
+  margin-right: 3px;
+}
 .curriculum .skills-lingue {
-  padding: 2rem;
+  padding: 1rem;
   line-height: 1.6;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
@@ -286,7 +297,7 @@ p {
 }
 .curriculum .cv {
   color: #ffffff;
-  padding: 2rem;
+  padding: 1rem;
   line-height: 1.6;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
@@ -300,6 +311,44 @@ p {
     gap: 1em;
   }
   .curriculum .skills-lingue {
+    padding: 2rem;
     margin-bottom: 0;
+    width: 40%;
+  }
+  .curriculum .lavoro {
+    width: 80%;
+  }
+  .curriculum .istruzione {
+    width: 80%;
+  }
+  .curriculum .cv {
+    padding: 2rem;
+  }
+}
+
+.progetti {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.progetti .card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.progetti .card .card-img-top {
+  padding: 10px;
+  border-radius: 15px;
+}
+.progetti .card .card-title {
+  color: #ffffff;
+}
+@media (min-width: 48em) {
+  .progetti {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10% 40px 10%;
+    gap: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
