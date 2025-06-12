@@ -22,7 +22,7 @@
   margin-top: 0px;
   align-items: flex-start;
   overflow: hidden;
-  background-color: #1082df;
+  background-color: hsla(207, 92%, 53%, 0.664);
   border-radius: 0px;
   padding: 0;
   gap: 1.5rem;
@@ -331,6 +331,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .progetti .card {
   background-color: rgba(255, 255, 255, 0.05);
@@ -350,5 +351,49 @@ p {
     flex-direction: row;
     padding: 0px 10% 40px 10%;
     gap: 1rem;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px 20px 20px;
+  margin-top: 60px;
+  background-color: #0a2841;
+  color: #ffffff;
+}
+footer form {
+  padding-top: 30px;
+}
+footer form .btn {
+  width: 100%;
+  background-color: #1082df;
+  color: #ffffff;
+  margin-top: 15px;
+}
+footer .diritti {
+  padding-top: 30px;
+}
+footer .diritti p {
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.631372549);
+}
+@media (min-width: 48em) {
+  footer {
+    margin-top: 100px;
+  }
+  footer .body-footer {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 15%;
+  }
+  footer .body-footer .footer-text {
+    width: 50%;
+    padding-right: 10%;
+    padding-top: 30px;
+  }
+  footer .body-footer form {
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
