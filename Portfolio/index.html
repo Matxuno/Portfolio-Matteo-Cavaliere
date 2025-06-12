@@ -18,14 +18,16 @@
             });
         })();
     </script>
-    <script type="text/javascript">
+<script type="text/javascript">
         window.onload = function () {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
+                const form = this;
                 // these IDs from the previous steps
-                emailjs.sendForm('service_gihgze9', 'template_mzlavxq', this)
+                emailjs.sendForm('service_gihgze9', 'template_mzlavxq', form) //this diventato fomr
                     .then(() => {
                         console.log('SUCCESS!');
+                        form.reset();
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
