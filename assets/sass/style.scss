@@ -1,6 +1,7 @@
 $colore-sfondo-navbar: hsla(0, 0%, 100%, 0);
 $colore-primario-sfondo: #0a2841;
 $colore-secondario-sfondo: #1082df;
+$colore-navbar: hsla(207, 92%, 53%, 0.664);
 $colore-hover: rgba(113, 175, 226, 0.568);
 $colore-testo-menu: #ffffff;
 $colore-sfondo-transparent: rgba(255, 255, 255, 0.05);
@@ -29,7 +30,7 @@ $colore-sfondo-transparent: rgba(255, 255, 255, 0.05);
     margin-top: 0px;
     align-items: flex-start;
     overflow: hidden;
-    background-color: $colore-secondario-sfondo;
+    background-color: $colore-navbar;
     border-radius: 0px;
     padding: 0;
     gap: 1.5rem;
@@ -165,7 +166,7 @@ p {
   color: $colore-testo-menu;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: $colore-testo-menu;
   color: $colore-primario-sfondo;
 }
@@ -371,38 +372,90 @@ p {
       width: 80%;
     }
 
-    .cv{
+    .cv {
       padding: 2rem;
     }
   }
 }
 
-.progetti{
+.progetti {
   padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+  flex-wrap: wrap;
 
-  .card{
+  .card {
     background-color: $colore-sfondo-transparent;
     border-radius: 10px;
     margin-bottom: 20px;
 
-    .card-img-top{
+    .card-img-top {
       padding: 10px;
       border-radius: 15px;
     }
 
-    .card-title{
+    .card-title {
       color: $colore-testo-menu;
     }
   }
 
-   @media (min-width: 48em){
+  @media (min-width: 48em) {
     display: flex;
     flex-direction: row;
     padding: 0px 10% 40px 10%;
     gap: 1rem;
-   }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px 20px 20px;
+  margin-top: 60px;
+  background-color: $colore-primario-sfondo;
+  color: $colore-testo-menu;
+
+  form {
+    padding-top: 30px;
+
+    .btn {
+      width: 100%;
+      background-color: $colore-secondario-sfondo;
+      color: $colore-testo-menu;
+      margin-top: 15px;
+    }
+  }
+
+  .diritti {
+    padding-top: 30px;
+
+    p {
+      display: flex;
+      justify-content: center;
+      color: #ffffffa1;
+    }
+
+  }
+
+  @media (min-width: 48em) {
+    margin-top: 100px;
+
+    .body-footer {
+      display: flex;
+      flex-direction: row;
+      margin: 2rem 15%;
+      //padding: 0px 10% 40px 10%;
+
+      .footer-text{
+        width: 50%;
+        padding-right: 10%;
+        padding-top: 30px;
+      }
+
+      form{
+        width: 50%;
+      }
+    }
+  }
 }
