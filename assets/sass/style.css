@@ -357,7 +357,7 @@ p {
 footer {
   display: flex;
   flex-direction: column;
-  padding: 60px 20px 20px 20px;
+  padding: 20px 20px 0px 20px;
   margin-top: 60px;
   background-color: #0a2841;
   color: #ffffff;
@@ -396,4 +396,52 @@ footer .diritti p {
   footer .body-footer form {
     width: 50%;
   }
+}
+
+.container-contatti {
+  padding: 60px 20px 20px 20px;
+  color: #ffffff;
+}
+.container-contatti .btn {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #0a2841;
+  color: #ffffff;
+  border-color: #0a2841;
+}
+.container-contatti .btn:hover {
+  background-color: #1082df;
+  border-color: #1082df;
+}
+@media (min-width: 48em) {
+  .container-contatti {
+    display: flex;
+    flex-direction: row;
+    padding: 150px 10% 40px 10%;
+  }
+  .container-contatti .footer-text {
+    width: 50%;
+    padding-right: 5%;
+  }
+  .container-contatti form {
+    width: 50%;
+    padding: 3%;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  .container-contatti form .btn {
+    width: 20%;
+    margin-top: 30px;
+  }
+}
+
+.diritti-contatti {
+  padding-top: 30px;
+}
+.diritti-contatti p {
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.631372549);
 }/*# sourceMappingURL=style.css.map */
