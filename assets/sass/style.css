@@ -267,7 +267,7 @@ p {
   padding: 0 20px 40px 20px;
 }
 .curriculum .badge {
-  background-color: #1082df;
+  background-color: hsla(207, 92%, 53%, 0.664);
   color: #ffffff;
   padding: 5px 8px;
   margin: 5px;
@@ -332,6 +332,19 @@ p {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+}
+.progetti .badge {
+  background-color: hsla(207, 92%, 53%, 0.664);
+  color: #ffffff;
+  padding: 5px 8px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+.progetti .badge .logo {
+  width: 15px;
+  height: auto;
+  border-radius: 15px;
+  margin-right: 3px;
 }
 .progetti .card {
   background-color: rgba(255, 255, 255, 0.05);
