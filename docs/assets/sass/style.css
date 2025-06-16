@@ -22,12 +22,17 @@
   margin-top: 0px;
   align-items: flex-start;
   overflow: hidden;
-  background-color: hsla(207, 92%, 53%, 0.664);
+  background-color: #1082df;
   border-radius: 0px;
   padding: 0;
   gap: 1.5rem;
   max-height: 0;
   transition: max-height 0.3s ease-out;
+}
+@media (min-width: 48em) {
+  .navbar .navbar-nav {
+    background-color: hsla(207, 92%, 53%, 0.664);
+  }
 }
 .navbar .navbar-nav .nav-link {
   color: #ffffff;

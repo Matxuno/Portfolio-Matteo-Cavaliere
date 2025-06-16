@@ -30,12 +30,16 @@ $colore-sfondo-transparent: rgba(255, 255, 255, 0.05);
     margin-top: 0px;
     align-items: flex-start;
     overflow: hidden;
-    background-color: $colore-navbar;
+    background-color: $colore-secondario-sfondo;
     border-radius: 0px;
     padding: 0;
     gap: 1.5rem;
     max-height: 0;
     transition: max-height .3s ease-out;
+
+    @media (min-width: 48em){
+      background-color: $colore-navbar;
+    }
 
     .nav-link {
       color: $colore-testo-menu;
