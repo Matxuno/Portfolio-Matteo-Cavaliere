@@ -231,6 +231,13 @@ p {
   gap: 1rem;
   padding: 10px 0px;
 }
+.icone-social a {
+  width: 32px;
+  height: 32px;
+}
+.icone-social a svg {
+  fill: #ffffff;
+}
 .icone-social .logo-s2i {
   height: 32px;
   width: 32px;
@@ -355,6 +362,7 @@ p {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   margin-bottom: 20px;
+  width: 20rem;
 }
 .progetti .card .card-img-top {
   padding: 10px;
@@ -391,6 +399,11 @@ footer form .btn {
 }
 footer .diritti {
   padding-top: 30px;
+}
+footer .diritti hr {
+  border: none;
+  height: 1px;
+  background-color: #ffffff;
 }
 footer .diritti p {
   display: flex;
@@ -457,6 +470,11 @@ footer .diritti p {
 
 .diritti-contatti {
   padding-top: 30px;
+}
+.diritti-contatti hr {
+  border: none;
+  height: 1px;
+  background-color: #ffffff;
 }
 .diritti-contatti p {
   display: flex;
