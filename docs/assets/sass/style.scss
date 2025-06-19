@@ -37,7 +37,7 @@ $colore-sfondo-transparent: rgba(255, 255, 255, 0.05);
     max-height: 0;
     transition: max-height .3s ease-out;
 
-    @media (min-width: 48em){
+    @media (min-width: 48em) {
       background-color: $colore-navbar;
     }
 
@@ -236,8 +236,6 @@ p {
   }
 }
 
-
-
 @media (max-width: 47.999em) {
   .container-fluid {
     display: flex;
@@ -269,6 +267,15 @@ p {
   justify-content: left;
   gap: 1rem;
   padding: 10px 0px;
+
+  a {
+    width: 32px;
+    height: 32px;
+
+    svg {
+      fill: #ffffff;
+    }
+  }
 
   .logo-s2i {
     height: 32px;
@@ -389,25 +396,26 @@ p {
   justify-content: center;
   flex-wrap: wrap;
 
-    .badge {
+  .badge {
     background-color: $colore-navbar;
     color: $colore-testo-menu;
     padding: 5px 8px;
     margin-bottom: 10px;
     margin-right: 5px;
 
-        .logo {
+    .logo {
       width: 15px;
       height: auto;
       border-radius: 15px;
       margin-right: 3px;
     }
-    }
+  }
 
   .card {
     background-color: $colore-sfondo-transparent;
     border-radius: 10px;
     margin-bottom: 20px;
+    width: 20rem;
 
     .card-img-top {
       padding: 10px;
@@ -449,11 +457,19 @@ footer {
   .diritti {
     padding-top: 30px;
 
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ffffff;
+  }
+
     p {
       display: flex;
       justify-content: center;
       color: #ffffffa1;
     }
+
+
 
   }
 
@@ -525,6 +541,12 @@ footer {
 
 .diritti-contatti {
   padding-top: 30px;
+
+    hr {
+    border: none;
+    height: 1px;
+    background-color: #ffffff;
+  }
 
   p {
     display: flex;
